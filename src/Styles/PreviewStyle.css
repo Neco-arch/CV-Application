@@ -1,0 +1,19 @@
+.CV_Header {
+    text-align: center;
+    font-size: 1rem;
+}
+
+
+
+.GeneralInfo {
+    border: 2px gray;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.GeneralInfo_Input {
+    display: flex;
+    gap: 1rem;
+}
+

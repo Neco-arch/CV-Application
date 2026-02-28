@@ -1,9 +1,8 @@
+
 .CV_Header {
     text-align: center;
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
-
-
 
 .GeneralInfo {
     border: 2px gray;
@@ -14,6 +13,8 @@
 
 .GeneralInfo_Input {
     display: flex;
-    gap: 1rem;
+    gap: 1.25rem;
 }
+
+
 

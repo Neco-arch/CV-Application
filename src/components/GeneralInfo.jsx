@@ -1,4 +1,4 @@
-export default function GeneralInfo({ handleChange }) {
+export default function GeneralInfo({ handleChange , GeneralInfo }) {
   return (
     <div className="GeneralInfo">
       <h2>General Info</h2>
@@ -9,6 +9,7 @@ export default function GeneralInfo({ handleChange }) {
             className="Info_Input"
             name="FirstName"
             onChange={handleChange}
+            value={GeneralInfo}
           ></input>
         </label>
 
@@ -16,8 +17,9 @@ export default function GeneralInfo({ handleChange }) {
           LastName :{" "}
           <input
             className="Info_Input"
-            name="FirstName"
+            name="LastName"
             onChange={handleChange}
+            value={GeneralInfo}
           ></input>
         </label>
 
@@ -25,8 +27,9 @@ export default function GeneralInfo({ handleChange }) {
           PhoneNumber :{" "}
           <input
             className="Info_Input"
-            name="FirstName"
+            name="PhoneNumber"
             onChange={handleChange}
+            value={GeneralInfo}
           ></input>
         </label>
 
@@ -34,8 +37,9 @@ export default function GeneralInfo({ handleChange }) {
           Email :{" "}
           <input
             className="Info_Input"
-            name="FirstName"
+            name="Email"
             onChange={handleChange}
+            value={GeneralInfo}
           ></input>
         </label>
       </div>

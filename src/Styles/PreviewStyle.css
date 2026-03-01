@@ -1,50 +1,85 @@
-
 .CV_Header {
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: 0.9rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    font-size: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     border-radius: 1rem;
-    height: 5vh;
-    
+    height: 60px;
+    margin-bottom: 2rem;
 }
 
-.GeneralInfo , .EduInfo {
-    border: 2px gray;
+h2 {
+    font-size: 1.75rem;
+}
+
+
+.GeneralInfo,
+.EduInfo,
+.PracticalExp {
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
 }
 
-.GeneralInfo_Input ,  .EduInfo_Input {
+
+.GeneralInfo_Input,
+.EduInfo_Input,
+.SkillInfo_Input {
     display: flex;
-    gap: 1.25rem;
+    gap: 2rem;
+    flex-wrap: wrap; 
 }
 
-.Submit_Button {
-    height: 2vh;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-    transition: transform 0.3s ease-out;
+
+label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-width: 200px;
 }
 
-.Submit_Button:hover {
-    transform: scale(1.03);
-}
 
 .Info_Input {
-    height: 1.5vh;
-    border-radius: 0.25rem;
-    border: 1px solid rgb(135, 132, 132);
-
-    transition: transform 0.3s ease-out;
+    height: 38px;             
+    width: 250px;             
+    padding: 0 10px;
+    border-radius: 0.4rem;
+    border: 1px solid #ccc;
+    transition: all 0.2s ease;
 }
 
-.Info_Input:hover {
-    transform: scale(1.01);
+.Info_Input:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
 }
 
 
+.Button_Wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+    gap: 20px;
+}
 
+.Submit_Button,
+.Add_NewOne {
+    width: 150px;
+    height: 45px;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    color: white;
+    transition: all 0.25s ease;
+}
+
+.Submit_Button:hover,
+.Add_NewOne:hover {
+    transform: scale(1.05);
+    background-color: #b9bbbf;
+}

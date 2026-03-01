@@ -6,14 +6,14 @@ export default function GeneralInfo({
   return (
     <div className="GeneralInfo">
       <h2>General Info</h2>
-      <form className="GeneralInfo_Input" >
+      <form className="GeneralInfo_Input" onSubmit={handleSubmitButton} >
         <label>
           FirstName :{" "}
           <input
             className="Info_Input"
             name="FirstName"
             onChange={handleChange}
-            value={GeneralInfo}
+            value={GeneralInfo.FirstName}
             required
           ></input>
         </label>
@@ -24,7 +24,7 @@ export default function GeneralInfo({
             className="Info_Input"
             name="LastName"
             onChange={handleChange}
-            value={GeneralInfo}
+            value={GeneralInfo.LastName}
             required
           ></input>
         </label>
@@ -36,7 +36,7 @@ export default function GeneralInfo({
             className="Info_Input"
             name="PhoneNumber"
             onChange={handleChange}
-            value={GeneralInfo}
+            value={GeneralInfo.PhoneNumber}
             required
           ></input>
         </label>
@@ -48,7 +48,7 @@ export default function GeneralInfo({
             className="Info_Input"
             name="Email"
             onChange={handleChange}
-            value={GeneralInfo}
+            value={GeneralInfo.email}
             required
           ></input>
         </label>
@@ -57,7 +57,6 @@ export default function GeneralInfo({
             type="submit"
             placeholder="Submit"
             className="Submit_Button"
-            onSubmit={handleSubmitButton}
             value="Submit"
           />
         </div>

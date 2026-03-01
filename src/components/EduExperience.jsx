@@ -7,14 +7,14 @@ export default function EduExperience({
   return (
     <div className="EduInfo">
       <h2>Education Experience</h2>
-      <form className="EduInfo_Input">
+      <form className="EduInfo_Input" onSubmit={handleSubmitButton}>
         <label>
           School / University Name :{" "}
           <input
             type="text"
             name="School/University_Name"
             className="Info_Input"
-            value={FormData}
+            value={FormData.School}
             onChange={Event_Handerler}
             required
           />
@@ -25,7 +25,7 @@ export default function EduExperience({
             type="text"
             name="Degree"
             className="Info_Input"
-            value={FormData}
+            value={FormData.Degree}
             onChange={Event_Handerler}
             required
           />
@@ -37,7 +37,7 @@ export default function EduExperience({
             type="text"
             name="Field_of_study"
             className="Info_Input"
-            value={FormData}
+            value={FormData.Field_of_study}
             onChange={Event_Handerler}
             required
           />
@@ -49,7 +49,7 @@ export default function EduExperience({
             type="date"
             name="StartDate"
             className="Info_Input"
-            value={FormData}
+            value={FormData.StartDate}
             onChange={Event_Handerler}
             required
           />
@@ -61,7 +61,7 @@ export default function EduExperience({
             type="date"
             name="EndDate"
             className="Info_Input"
-            value={FormData}
+            value={FormData.EndDate}
             onChange={Event_Handerler}
             required
           />
@@ -71,19 +71,18 @@ export default function EduExperience({
           <input
             type="submit"
             className="Submit_Button"
-            onSubmit={handleSubmitButton}
             value="Submit"
             id="Submit"
           />
+        </div>
+      </form>
 
-          <input
+      <input
             type="button"
             className="Add_NewOne"
             onClick={addNewEdu}
             value="Add More"
           />
-        </div>
-      </form>
     </div>
   );
 }

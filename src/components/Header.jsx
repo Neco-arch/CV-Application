@@ -1,9 +1,9 @@
 export default function HeaderSection() {
   return (
-    <div>
+    <>
       <header className="CV_Header">
-        <h1>CV Application</h1>
+        <h1>CV Creator</h1>
       </header>
-    </div>
+    </>
   );
 }

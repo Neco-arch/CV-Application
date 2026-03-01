@@ -1,19 +1,49 @@
 
 .CV_Header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     font-size: 0.9rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    border-radius: 1rem;
+    height: 5vh;
+    
 }
 
-.GeneralInfo {
+.GeneralInfo , .EduInfo {
     border: 2px gray;
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
 }
 
-.GeneralInfo_Input {
+.GeneralInfo_Input ,  .EduInfo_Input {
     display: flex;
     gap: 1.25rem;
+}
+
+.Submit_Button {
+    height: 2vh;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease-out;
+}
+
+.Submit_Button:hover {
+    transform: scale(1.03);
+}
+
+.Info_Input {
+    height: 1.5vh;
+    border-radius: 0.25rem;
+    border: 1px solid rgb(135, 132, 132);
+
+    transition: transform 0.3s ease-out;
+}
+
+.Info_Input:hover {
+    transform: scale(1.01);
 }
 
 

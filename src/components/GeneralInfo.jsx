@@ -1,9 +1,9 @@
-export default function GeneralInfo({ handleChange , GeneralInfo }) {
+export default function GeneralInfo({ handleChange , GeneralInfo , handleSubmitButton }) {
   return (
     <div className="GeneralInfo">
       <h2>General Info</h2>
-      <div className="GeneralInfo_Input">
-        <label>
+      <form className="GeneralInfo_Input">
+        <label cla>
           FirstName :{" "}
           <input
             className="Info_Input"
@@ -42,7 +42,11 @@ export default function GeneralInfo({ handleChange , GeneralInfo }) {
             value={GeneralInfo}
           ></input>
         </label>
-      </div>
+        <div>
+          <input type="submit" placeholder="Submit" className="Submit_Button" onClick={handleSubmitButton}/>
+        </div>
+        
+      </form>
     </div>
   );
 }

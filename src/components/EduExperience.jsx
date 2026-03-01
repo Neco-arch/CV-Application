@@ -1,14 +1,16 @@
-export default function EduExperience({ Event_Handerler, FormData }) {
+export default function EduExperience({ Event_Handerler, FormData , handleSubmitButton }) {
   return (
-    <div className="GeneralInfo">
+    <div className="EduInfo">
       <h2>Education Experience</h2>
-      <div className="GeneralInfo_Input"> 
+      <form className="EduInfo_Input"> 
         <label>
           School / University Name :{" "}
           <input
             type="text"
             name="School/University_Name"
             className="Info_Input"
+            value={FormData}
+            onChange={Event_Handerler}
           />
         </label>
         <label>
@@ -18,6 +20,7 @@ export default function EduExperience({ Event_Handerler, FormData }) {
             name="Degree"
             className="Info_Input"
             value={FormData}
+            onChange={Event_Handerler}
           />
         </label>
 
@@ -28,29 +31,34 @@ export default function EduExperience({ Event_Handerler, FormData }) {
             name="Field_of_study"
             className="Info_Input"
             value={FormData}
+            onChange={Event_Handerler}
           />
         </label>
 
         <label>
           StartDate :{" "}
           <input
-            type="text"
+            type="date"
             name="StartDate"
             className="Info_Input"
             value={FormData}
+            onChange={Event_Handerler}
           />
         </label>
 
         <label>
           EndDate : {""}
           <input
-            type="text"
+            type="date"
             name="EndDate"
             className="Info_Input"
             value={FormData}
+            onChange={Event_Handerler}
           />
         </label>
-      </div>
+
+        <input type="submit" className="Submit_Button" onClick={handleSubmitButton}/>
+      </form>
     </div>
   );
 }

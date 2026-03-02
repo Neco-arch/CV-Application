@@ -1,8 +1,9 @@
 export default function PracticalExp({
-  Event_Handerler,
-  FormData,
+  handleChange,
+  ExpData,
   handleSubmitButton,
-  AddNewExp
+  AddNewExp,
+  Index
 }) {
   return (
     <div className="PracticalExp">
@@ -13,8 +14,8 @@ export default function PracticalExp({
           <input
             type="text"
             className="Info_Input"
-            value={FormData}
-            onChange={Event_Handerler}
+            value={ExpData.CompanyName}
+            onChange={handleChange}
             required
           />
         </label>
@@ -23,8 +24,8 @@ export default function PracticalExp({
           <input
             type="text"
             className="Info_Input"
-            value={FormData}
-            onChange={Event_Handerler}
+            value={ExpData.Position}
+            onChange={handleChange}
             required
           />
         </label>
@@ -33,8 +34,8 @@ export default function PracticalExp({
           <input
             type="text"
             className="Info_Input"
-            value={FormData}
-            onChange={Event_Handerler}
+            value={ExpData.Main_Responsibilities}
+            onChange={handleChange}
             required
           />
         </label>
@@ -44,8 +45,8 @@ export default function PracticalExp({
           <input
             type="date"
             className="Info_Input"
-            value={FormData}
-            onChange={Event_Handerler}
+            value={ExpData.StartDate_Exp}
+            onChange={handleChange}
             required
           />
         </label>
@@ -55,8 +56,8 @@ export default function PracticalExp({
           <input
             type="date"
             className="Info_Input"
-            value={FormData}
-            onChange={Event_Handerler}
+            value={ExpData.EndDate_Exp}
+            onChange={handleChange}
             required
           />
         </label>

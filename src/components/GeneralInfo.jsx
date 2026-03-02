@@ -14,6 +14,7 @@ export default function GeneralInfo({
             name="FirstName"
             onChange={handleChange}
             value={GeneralInfo.FirstName}
+            pattern="[A-Za-z]+"
             required
           ></input>
         </label>
@@ -25,6 +26,7 @@ export default function GeneralInfo({
             name="LastName"
             onChange={handleChange}
             value={GeneralInfo.LastName}
+            pattern="[A-Za-z]+"
             required
           ></input>
         </label>
@@ -37,6 +39,7 @@ export default function GeneralInfo({
             name="PhoneNumber"
             onChange={handleChange}
             value={GeneralInfo.PhoneNumber}
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
             required
           ></input>
         </label>
@@ -48,7 +51,7 @@ export default function GeneralInfo({
             className="Info_Input"
             name="Email"
             onChange={handleChange}
-            value={GeneralInfo.email}
+            value={GeneralInfo.Email}
             required
           ></input>
         </label>

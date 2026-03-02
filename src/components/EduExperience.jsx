@@ -1,11 +1,14 @@
 export default function EduExperience({
-  Event_Handerler,
-  FormData,
+  handleChange,
+  EduData,
   handleSubmitButton,
   addNewEdu,
+  Index
 }) {
+
+  const today = new Date().toISOString().split("T")[0];
   return (
-    <div className="EduInfo">
+    <div className="EduInfo" key={Index}>
       <h2>Education Experience</h2>
       <form className="EduInfo_Input" onSubmit={handleSubmitButton}>
         <label>
@@ -14,8 +17,8 @@ export default function EduExperience({
             type="text"
             name="School/University_Name"
             className="Info_Input"
-            value={FormData.School}
-            onChange={Event_Handerler}
+            value={EduData.School_University}
+            onChange={handleChange}
             required
           />
         </label>
@@ -25,20 +28,20 @@ export default function EduExperience({
             type="text"
             name="Degree"
             className="Info_Input"
-            value={FormData.Degree}
-            onChange={Event_Handerler}
+            value={EduData.Degree}
+            onChange={handleChange}
             required
           />
         </label>
 
         <label>
-          Field of study :{" "}
+          Field of study :{""}
           <input
             type="text"
             name="Field_of_study"
             className="Info_Input"
-            value={FormData.Field_of_study}
-            onChange={Event_Handerler}
+            value={EduData.Field_of_study}
+            onChange={handleChange}
             required
           />
         </label>
@@ -49,8 +52,8 @@ export default function EduExperience({
             type="date"
             name="StartDate"
             className="Info_Input"
-            value={FormData.StartDate}
-            onChange={Event_Handerler}
+            value={EduData.StartDate}
+            onChange={handleChange}
             required
           />
         </label>
@@ -61,8 +64,10 @@ export default function EduExperience({
             type="date"
             name="EndDate"
             className="Info_Input"
-            value={FormData.EndDate}
-            onChange={Event_Handerler}
+            value={EduData.EndDate}
+            onChange={handleChange}
+            min={EduData.StartDate}
+            max={today}
             required
           />
         </label>
@@ -76,6 +81,7 @@ export default function EduExperience({
           />
         </div>
       </form>
+
 
       <input
             type="button"

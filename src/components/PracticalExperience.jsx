@@ -1,21 +1,19 @@
 export default function PracticalExp({
-  handleChange,
   ExpData,
   handleSubmitButton,
   AddNewExp,
   Index
 }) {
   return (
-    <div className="PracticalExp">
+    <div className="PracticalExp" >
       <h2>PracticalExperience</h2>
-      <form className="SkillInfo_Input" onSubmit={handleSubmitButton}>
+      <form className="SkillInfo_Input" onSubmit={handleSubmitButton} key={Index} itemID={Index}>
         <label>
           Company Name :
           <input
             type="text"
             className="Info_Input"
             value={ExpData.CompanyName}
-            onChange={handleChange}
             required
           />
         </label>
@@ -25,7 +23,6 @@ export default function PracticalExp({
             type="text"
             className="Info_Input"
             value={ExpData.Position}
-            onChange={handleChange}
             required
           />
         </label>
@@ -35,7 +32,6 @@ export default function PracticalExp({
             type="text"
             className="Info_Input"
             value={ExpData.Main_Responsibilities}
-            onChange={handleChange}
             required
           />
         </label>
@@ -46,7 +42,6 @@ export default function PracticalExp({
             type="date"
             className="Info_Input"
             value={ExpData.StartDate_Exp}
-            onChange={handleChange}
             required
           />
         </label>
@@ -57,7 +52,6 @@ export default function PracticalExp({
             type="date"
             className="Info_Input"
             value={ExpData.EndDate_Exp}
-            onChange={handleChange}
             required
           />
         </label>

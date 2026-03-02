@@ -37,43 +37,30 @@ function App() {
     },
   ]);
 
-  function UpdateDataGeneralInfo(event) {
-    const { name, value } = event.target;
-    SaveDataInfo((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
+  function HandleSubmit_GeneralInfo(event) {
+    const formData = event.target
+
+    console.log(formData.get("FirstName"))
+    SaveDataInfo({
+      FirstName: formData.get("FirstName"),
+      LastName: formData.get("LastName"),
+      PhoneNumber: formData.get("PhoneNumber"),
+      Email: formData.get("Email"),
+    })
   }
 
-  function UpdateDataEdu(event) {
-    const { name, value } = event.target;
-    SaveDataEdu((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  }
-
-  function UpdateDateExp(event) {
-    const { name, value } = event.target;
-    SavaDataExp((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  }
 
   return (
     <>
       <HeaderSection></HeaderSection>
       <GeneralInfo
-        GeneralInfo={Data}
-        handleChange={UpdateDataGeneralInfo}
+        GeneralInfo={Data_Info} handleSubmitButton={HandleSubmit_GeneralInfo}
       ></GeneralInfo>
       <EduExperience
-        EduData={Data}
-        handleChange={UpdateDataEdu}
+        EduData={Data_Edu}
         Index={EduIndex}
       ></EduExperience>
-      <PracticalExp ExpData={Data} handleChange={UpdateDateExp}  Index={ExpIndex}></PracticalExp>
+      <PracticalExp ExpData={Data_Exp}   Index={ExpIndex}></PracticalExp>
     </>
   );
 }

@@ -5,7 +5,11 @@ import EduExperience from "./components/EduExperience";
 import PracticalExp from "./components/PracticalExperience";
 
 function App() {
-  const [FormSubmiited, setFormSubmiited] = useState(false);
+  const [FormSubmiited_Ge, setFormSubmiited_Ge] = useState(false);
+
+  const [FormSubmiited_Edu, setFormSubmiited_Edu] = useState(false);
+
+  const [FormSubmiited_Exp, setFormSubmiited_Exp] = useState(false);
 
   const [Data_Info, SaveDataInfo] = useState({
     FirstName: "",
@@ -34,42 +38,85 @@ function App() {
     },
   ]);
 
-  //General Info Part
-  function handleChange(e) {
+  // GeneralInfo Part
+  function handleChange_Ge(e) {
     SaveDataInfo((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
     }));
   }
 
-  function handleSubmitbutton(event) {
+  function handleSubmitbutton_Ge(event) {
     event.preventDefault();
 
-    setFormSubmiited(true);
+    setFormSubmiited_Ge(true);
   }
 
-  function HandleEditButton() {
-    setFormSubmiited(false);
+  function HandleEditButton_Ge() {
+    setFormSubmiited_Ge(false);
   }
 
+  //Edu Part
+
+  function handleChange_Edu(e) {
+    SaveDataEdu((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
+  }
+  function handleSubmitbutton_Edu(event) {
+    event.preventDefault();
+
+    setFormSubmiited_Edu(true);
+  }
+
+  function HandleEditButton_Edu() {
+    setFormSubmiited_Edu(false);
+  }
+
+  //PracticalExp
+
+  function handleChange_Exp(e) {
+    SavaDataExp((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
+  }
+  function handleSubmitbutton_Exp(event) {
+    event.preventDefault();
+
+    setFormSubmiited_Exp(true);
+  }
+
+  function HandleEditButton_Exp() {
+    setFormSubmiited_Exp(false);
+  }
 
   return (
     <>
       <HeaderSection></HeaderSection>
       <GeneralInfo
         GeneralInfo={Data_Info}
-        ChangeValue={handleChange}
-        handleSubmitButton={handleSubmitbutton}
-        handleEditButton={HandleEditButton}
-        IsFormSubmitted={FormSubmiited}
+        ChangeValue={handleChange_Ge}
+        handleSubmitButton={handleSubmitbutton_Ge}
+        handleEditButton={HandleEditButton_Ge}
+        IsFormSubmitted={FormSubmiited_Ge}
       ></GeneralInfo>
-      <EduExperience 
-      EduData={Data_Edu}
+      <EduExperience
+        ChangeValue={handleChange_Edu}
+        handleSubmitButton={handleSubmitbutton_Edu}
+        handleEditButton={HandleEditButton_Edu}
+        IsFormSubmitted={FormSubmiited_Edu}
+        EduData={Data_Edu}
       ></EduExperience>
-      <PracticalExp 
-      ExpData={Data_Exp}>
-        
-      </PracticalExp>
+      <PracticalExp
+        ExpData={Data_Exp}
+        ChangeValue={handleChange_Exp}
+        handleSubmitButton={handleSubmitbutton_Exp}
+        handleEditButton={HandleEditButton_Exp}
+        IsFormSubmitted={FormSubmiited_Exp}
+        EduData={Data_Edu}
+      ></PracticalExp>
     </>
   );
 }

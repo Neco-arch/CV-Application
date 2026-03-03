@@ -4,7 +4,6 @@ export default function GeneralInfo({
   ChangeValue,
   IsFormSubmitted ,
   handleEditButton,
-  
 }) {
   if (IsFormSubmitted === false) {
     return (

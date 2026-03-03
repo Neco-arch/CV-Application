@@ -5,8 +5,7 @@ import EduExperience from "./components/EduExperience";
 import PracticalExp from "./components/PracticalExperience";
 
 function App() {
-  let EduIndex = 0;
-  let ExpIndex = 0;
+  const [FormSubmiited, setFormSubmiited] = useState(false);
 
   const [Data_Info, SaveDataInfo] = useState({
     FirstName: "",
@@ -17,7 +16,6 @@ function App() {
 
   const [Data_Edu, SaveDataEdu] = useState([
     {
-      id: 0,
       School_University: "",
       Degree: "",
       Field_of_study: "",
@@ -28,7 +26,6 @@ function App() {
 
   const [Data_Exp, SavaDataExp] = useState([
     {
-      id: 0,
       CompanyName: "",
       Position: "",
       Main_Responsibilities: "",
@@ -37,16 +34,22 @@ function App() {
     },
   ]);
 
-  function HandleSubmit_GeneralInfo(event) {
-    const formData = event.target
+  //General Info Part
+  function handleChange(e) {
+    SaveDataInfo((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
+  }
 
-    console.log(formData.get("FirstName"))
-    SaveDataInfo({
-      FirstName: formData.get("FirstName"),
-      LastName: formData.get("LastName"),
-      PhoneNumber: formData.get("PhoneNumber"),
-      Email: formData.get("Email"),
-    })
+  function handleSubmitbutton(event) {
+    event.preventDefault();
+
+    setFormSubmiited(true);
+  }
+
+  function HandleEditButton() {
+    setFormSubmiited(false);
   }
 
 
@@ -54,13 +57,19 @@ function App() {
     <>
       <HeaderSection></HeaderSection>
       <GeneralInfo
-        GeneralInfo={Data_Info} handleSubmitButton={HandleSubmit_GeneralInfo}
+        GeneralInfo={Data_Info}
+        ChangeValue={handleChange}
+        handleSubmitButton={handleSubmitbutton}
+        handleEditButton={HandleEditButton}
+        IsFormSubmitted={FormSubmiited}
       ></GeneralInfo>
-      <EduExperience
-        EduData={Data_Edu}
-        Index={EduIndex}
+      <EduExperience 
+      EduData={Data_Edu}
       ></EduExperience>
-      <PracticalExp ExpData={Data_Exp}   Index={ExpIndex}></PracticalExp>
+      <PracticalExp 
+      ExpData={Data_Exp}>
+        
+      </PracticalExp>
     </>
   );
 }

@@ -1,13 +1,12 @@
 export default function PracticalExp({
   ExpData,
   handleSubmitButton,
-  AddNewExp,
-  Index
+
 }) {
   return (
     <div className="PracticalExp" >
       <h2>PracticalExperience</h2>
-      <form className="SkillInfo_Input" onSubmit={handleSubmitButton} key={Index} itemID={Index}>
+      <form className="SkillInfo_Input" onSubmit={handleSubmitButton}  >
         <label>
           Company Name :
           <input
@@ -65,13 +64,6 @@ export default function PracticalExp({
           />
         </div>
       </form>
-
-        <input
-            type="button"
-            className="Add_NewOne"
-            onClick={AddNewExp}
-            value="Add More"
-          />
     </div>
   );
 }

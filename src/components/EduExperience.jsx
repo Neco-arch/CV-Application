@@ -1,15 +1,14 @@
 export default function EduExperience({
   EduData,
   handleSubmitButton,
-  addNewEdu,
-  Index
+
 }) {
 
   const today = new Date().toISOString().split("T")[0];
   return (
     <div className="EduInfo">
       <h2>Education Experience</h2>
-      <form className="EduInfo_Input" onSubmit={handleSubmitButton}  key={Index}>
+      <form className="EduInfo_Input" onSubmit={handleSubmitButton}>
         <label>
           School / University Name :{" "}
           <input
@@ -75,14 +74,6 @@ export default function EduExperience({
           />
         </div>
       </form>
-
-
-      <input
-            type="button"
-            className="Add_NewOne"
-            onClick={addNewEdu}
-            value="Add More"
-          />
     </div>
   );
 }

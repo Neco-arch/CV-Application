@@ -67,7 +67,7 @@ label {
 }
 
 .Submit_Button,
-.Add_NewOne {
+.EditButton {
     width: 150px;
     height: 45px;
     border-radius: 0.5rem;
@@ -78,8 +78,7 @@ label {
     transition: all 0.25s ease;
 }
 
-.Submit_Button:hover,
-.Add_NewOne:hover {
+.Submit_Button:hover , .EditButton:hover {
     transform: scale(1.05);
     background-color: #b9bbbf;
 }

@@ -3,6 +3,7 @@ import GeneralInfo from "./components/GeneralInfo";
 import HeaderSection from "./components/Header";
 import EduExperience from "./components/EduExperience";
 import PracticalExp from "./components/PracticalExperience";
+import DisplayCV from "./components/Cv_display";
 
 function App() {
   const [FormSubmiited_Ge, setFormSubmiited_Ge] = useState(false);
@@ -11,10 +12,12 @@ function App() {
 
   const [FormSubmiited_Exp, setFormSubmiited_Exp] = useState(false);
 
+  const [AllThreeSubmitted, SetAllThreeSubmitted] = useState(false);
+
   const [Data_Info, SaveDataInfo] = useState({
     FirstName: "",
     LastName: "",
-    PhoneNumber: "",
+    LastName: "",
     Email: "",
   });
 
@@ -92,7 +95,7 @@ function App() {
     setFormSubmiited_Exp(false);
   }
 
-  return (
+    return (
     <>
       <HeaderSection></HeaderSection>
       <GeneralInfo
@@ -117,6 +120,11 @@ function App() {
         IsFormSubmitted={FormSubmiited_Exp}
         EduData={Data_Edu}
       ></PracticalExp>
+      <DisplayCV 
+    GeneralInfo={Data_Info} 
+    EduInfo={Data_Edu} 
+    ExpInfo={Data_Exp} 
+/>
     </>
   );
 }

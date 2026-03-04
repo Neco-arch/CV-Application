@@ -27,14 +27,19 @@ export default function EduExperience({
 
           <label>
             Degree:
-            <input
-              type="text"
+            <select
               name="Degree"
               className="Info_Input"
               value={EduData.Degree || ""}
               onChange={ChangeValue}
               required
-            />
+            >
+              <option value="">Select Degree</option>
+              <option value="Associate">Associate</option>
+              <option value="Bachelor">Bachelor</option>
+              <option value="Master">Master</option>
+              <option value="Doctoral">Doctoral</option>
+            </select>
           </label>
 
           <label>
@@ -76,11 +81,7 @@ export default function EduExperience({
           </label>
 
           <div className="Button_Wrapper">
-            <input
-              type="submit"
-              className="Submit_Button"
-              value="Submit"
-            />
+            <input type="submit" className="Submit_Button" value="Submit" />
           </div>
         </form>
       </div>

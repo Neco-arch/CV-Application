@@ -12,12 +12,11 @@ function App() {
 
   const [FormSubmiited_Exp, setFormSubmiited_Exp] = useState(false);
 
-  const [AllThreeSubmitted, SetAllThreeSubmitted] = useState(false);
 
   const [Data_Info, SaveDataInfo] = useState({
     FirstName: "",
     LastName: "",
-    LastName: "",
+    PhoneNumber: "",
     Email: "",
   });
 

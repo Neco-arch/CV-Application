@@ -86,3 +86,16 @@ label {
 .ProfilePicture {
     width: 300px;
 }
+
+.CV_Part {
+    display: flex;
+    gap: 10%;
+    margin-top: 5%;
+}
+
+.Info_Section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+}

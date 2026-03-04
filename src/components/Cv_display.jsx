@@ -10,12 +10,12 @@ export default function DisplayCV({ GeneralInfo, EduInfo, ExpInfo }) {
           <h2>General Info</h2>
           <p>First Name : {GeneralInfo.FirstName}</p>
           <p>Last Name : {GeneralInfo.LastName}</p>
-          <p>Email : {GeneralInfo.Email}</p>
-          <p>PhoneNumber : {GeneralInfo.PhoneNumber}</p>
+          <p><img  src="./src/assets/email.svg" alt="Email_Icon" className="Icon"/>Email : {GeneralInfo.Email}</p>
+          <p><img  src="./src/assets/phone.svg" alt="Email_Icon" className="Icon"/>PhoneNumber : {GeneralInfo.PhoneNumber}</p>
         </div>
 
         <div className="EduSection">
-          <h2>Education</h2>
+          <h2>Education <img  src="./src/assets/school.svg" alt="Email_Icon" className="Icon"/></h2>
           <p> School / University : {EduInfo.School_University}</p>
           <p> Degree : {EduInfo.Degree}</p>
           <p> Field Of Study : {EduInfo.Field_of_study}</p>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState , cloneElement } from "react";
 import GeneralInfo from "./components/GeneralInfo";
 import HeaderSection from "./components/Header";
 import EduExperience from "./components/EduExperience";
@@ -14,8 +14,8 @@ function App() {
 
 
   const [Data_Info, SaveDataInfo] = useState({
-    FirstName: "",
-    LastName: "",
+    FirstName: "Dele",
+    LastName: "Ali",
     PhoneNumber: "",
     Email: "",
   });

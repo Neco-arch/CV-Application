@@ -25,6 +25,15 @@ h2 {
 }
 
 
+.Icon {
+    width: 20px;
+}
+
+p:has(.Icon) , h2:has(.Icon) {
+    display: flex;
+    gap: 8px;
+}
+
 .GeneralInfo,
 .EduInfo,
 .PracticalExp {
@@ -99,6 +108,7 @@ label {
 
 .ProfilePicture {
     width: 300px;
+    border: 1rem;
 }
 
 .CV_Part {

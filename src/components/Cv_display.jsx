@@ -1,12 +1,13 @@
 export default function DisplayCV({ GeneralInfo, EduInfo, ExpInfo }) {
   return (
     <div className="CV_Part">
-      <div>
+      <div className="ProfilePicture_Name">
         <h2>{GeneralInfo.FirstName + " " +GeneralInfo.LastName} </h2>
         <img src="./src/assets/Profile.jpg" className="ProfilePicture" />
       </div>
       <div className="Info_Section">
         <div className="GeneralSection">
+          <h2>General Info</h2>
           <p>First Name : {GeneralInfo.FirstName}</p>
           <p>Last Name : {GeneralInfo.LastName}</p>
           <p>Email : {GeneralInfo.Email}</p>
@@ -14,6 +15,7 @@ export default function DisplayCV({ GeneralInfo, EduInfo, ExpInfo }) {
         </div>
 
         <div className="EduSection">
+          <h2>Education</h2>
           <p> School / University : {EduInfo.School_University}</p>
           <p> Degree : {EduInfo.Degree}</p>
           <p> Field Of Study : {EduInfo.Field_of_study}</p>
@@ -22,9 +24,9 @@ export default function DisplayCV({ GeneralInfo, EduInfo, ExpInfo }) {
         </div>
 
         <div className="ExpSection">
-          <p>CompanyName : {ExpInfo.CompanyName}</p>
+          <h2>Experience</h2>
+          <p>Company Name : {ExpInfo.CompanyName}</p>
           <p>Position : {ExpInfo.Position}</p>
-          <p>Responsibility : {ExpInfo.Main_Responsibilities}</p>
           <p>StartDate : {ExpInfo.StartDate_Exp}</p>
           <p>EndDate : {ExpInfo.EndDate_Exp}</p>
         </div>

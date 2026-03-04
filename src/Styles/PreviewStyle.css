@@ -10,6 +10,16 @@
     margin-bottom: 2rem;
 }
 
+.Wrapper {
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    height: 100%;
+}
+
+.FormSection {
+    padding: 40px;
+}
+
 h2 {
     font-size: 1.75rem;
 }
@@ -83,19 +93,28 @@ label {
     background-color: #b9bbbf;
 }
 
+.ProfilePicture_Name {
+    text-align: center;
+}
+
 .ProfilePicture {
     width: 300px;
 }
 
 .CV_Part {
     display: flex;
-    gap: 10%;
+    color: black;
+    flex-direction: column;
+    gap: 2rem;
     margin-top: 5%;
+    background-color: rgb(209, 206, 206);
+    border-radius: 1rem;
 }
 
 .Info_Section {
+    padding: 90px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 2rem;
+    gap: 1rem;
 }
+

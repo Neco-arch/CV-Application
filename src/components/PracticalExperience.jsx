@@ -35,17 +35,6 @@ export default function PracticalExp({
             />
           </label>
 
-          <label>
-            Main Responsibilities:
-            <input
-              type="text"
-              name="Main_Responsibilities"
-              className="Info_Input"
-              value={ExpData.Main_Responsibilities || ""}
-              onChange={ChangeValue}
-              required
-            />
-          </label>
 
           <label>
             Start Date:

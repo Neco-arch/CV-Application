@@ -95,7 +95,8 @@ function App() {
   }
 
     return (
-    <>
+    <div className="Wrapper">
+    <div className="FormSection">
       <HeaderSection></HeaderSection>
       <GeneralInfo
         GeneralInfo={Data_Info}
@@ -119,12 +120,13 @@ function App() {
         IsFormSubmitted={FormSubmiited_Exp}
         EduData={Data_Edu}
       ></PracticalExp>
+    </div>
       <DisplayCV 
     GeneralInfo={Data_Info} 
     EduInfo={Data_Edu} 
     ExpInfo={Data_Exp} 
 />
-    </>
+    </div>
   );
 }
 
